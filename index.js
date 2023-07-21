@@ -11,9 +11,9 @@ const createTimerAnimator = () => {
     const startTimeStamp = new Date().getTime() 
     let time = 0
     let diff
-    let hh = '00'
-    let mm = '00'
-    let ss = seconds
+    let hh 
+    let mm 
+    let ss 
     
     function runSecond() {            
 
@@ -22,7 +22,6 @@ const createTimerAnimator = () => {
 
       mm = String(Math.floor((seconds - Number(hh) * 3600) / 60))    
       if (mm.length < 2) mm = '0' + mm
-
       
       ss = String(seconds - Number(hh) * 3600 - Number(mm) * 60)
       if (ss.length < 2) ss = '0' + ss
